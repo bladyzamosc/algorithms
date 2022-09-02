@@ -10,16 +10,24 @@ import org.junit.jupiter.api.Test
 class PermutationTest {
 
     @Test
-    fun testPermutationSimple(){
+    fun testPermutationOneResult(){
         val permutation = Permutation();
-        val permutations = permutation.permutation("a", "");
-        Assertions.assertEquals(1, permutations.size);
+        val permutations = permutation.permutation("a", "")
+        Assertions.assertEquals(1, permutations.size)
     }
 
     @Test
-    fun testPermutationMore(){
+    fun testPermutationVerifyNumbers(){
         val permutation = Permutation();
         val permutations = permutation.permutation("abc", "");
         Assertions.assertEquals(6, permutations.size);
+    }
+
+    @Test
+    fun testPermutationCheckContent(){
+        val permutation = Permutation();
+        val permutations = permutation.permutation("ab", "")
+        Assertions.assertTrue(permutations.contains("ab"))
+        Assertions.assertTrue(permutations.contains("ba"))
     }
 }
