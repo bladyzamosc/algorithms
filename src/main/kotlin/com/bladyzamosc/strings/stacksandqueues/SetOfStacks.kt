@@ -3,7 +3,7 @@ package com.bladyzamosc.strings.stacksandqueues
 import java.util.*
 
 /**
- * User: Z6EKI
+ * User: Bladyzamosc
  * Date: 04.09.2022
  */
 class SetOfStacks(private var capacity: Int) {

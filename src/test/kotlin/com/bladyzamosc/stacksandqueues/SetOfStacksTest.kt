@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 
 
 /**
- * User: Z6EKI
+ * User: Bladyzamosc
  * Date: 04.09.2022
  */
 class SetOfStacksTest {
