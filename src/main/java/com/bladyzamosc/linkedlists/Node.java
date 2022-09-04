@@ -28,7 +28,7 @@ public class Node
   {
     Node prev = null;
     Node current = node;
-    Node next = null;
+    Node next;
 
     while (current != null)
     {
