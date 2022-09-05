@@ -1,7 +1,5 @@
 package com.bladyzamosc.stacksandqueues
 
-import com.bladyzamosc.strings.stacksandqueues.SetOfStacks
-
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

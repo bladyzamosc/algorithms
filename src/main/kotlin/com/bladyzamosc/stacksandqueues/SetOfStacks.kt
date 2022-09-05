@@ -1,4 +1,4 @@
-package com.bladyzamosc.strings.stacksandqueues
+package com.bladyzamosc.stacksandqueues
 
 import java.util.*
 
