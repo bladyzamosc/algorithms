@@ -14,8 +14,8 @@ public class TreeMix
       return null;
     int mid = (s + e) / 2;
     TreeNode treeNode = new TreeNode(array[mid]);
-    treeNode.left = minimalBST(array, s, mid - 1);
-    treeNode.right = minimalBST(array, mid + 1, e);
+    treeNode.setLeft(minimalBST(array, s, mid - 1));
+    treeNode.setRight(minimalBST(array, mid + 1, e));
     return treeNode;
   }
 
@@ -30,19 +30,19 @@ public class TreeMix
 
   private void checkHeightsOdLeafs(TreeNode node, List<Integer> heights, int level)
   {
-    if (node.left == null && node.right == null)
+    if (node.getLeft() == null && node.getRight() == null)
     {
       heights.add(level);
     }
     else
     {
-      if (node.left != null)
+      if (node.getLeft() != null)
       {
-        checkHeightsOdLeafs(node.left, heights, level + 1);
+        checkHeightsOdLeafs(node.getLeft(), heights, level + 1);
       }
-      if (node.right != null)
+      if (node.getRight() != null)
       {
-        checkHeightsOdLeafs(node.right, heights, level + 1);
+        checkHeightsOdLeafs(node.getRight(), heights, level + 1);
       }
     }
   }

@@ -34,13 +34,13 @@ public class TreeTest
     TreeMix treeMix = new TreeMix();
     TreeNode treeNode = treeMix.minimalBST(array, 0, array.length - 1);
     TreeNode node = new TreeNode(77);
-    node.left = new TreeNode(88);
-    node.left.left = new TreeNode(99);
-    node.left.left.right = new TreeNode(100);
-    node.left.left.right.right = new TreeNode(101);
-    node.left.left.right.right.left = new TreeNode(102);
-    node.left.left.right.right.left.left = new TreeNode(102);
-    treeNode.left = node;
+    node.setLeft(new TreeNode(88));
+    node.getLeft().setLeft(new TreeNode(99));
+    node.getLeft().getLeft().setRight(new TreeNode(100));
+    node.getLeft().getLeft().getRight().setRight(new TreeNode(101));
+    node.getLeft().getLeft().getRight().getRight().setLeft(new TreeNode(102));
+    node.getLeft().getLeft().getRight().getRight().getLeft().setLeft(new TreeNode(102));
+    treeNode.setLeft(node);
     Assertions.assertFalse(treeMix.isBalanced(treeNode));
   }
 }
