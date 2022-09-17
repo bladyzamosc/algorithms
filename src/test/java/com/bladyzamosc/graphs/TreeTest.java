@@ -43,4 +43,19 @@ public class TreeTest
     treeNode.setLeft(node);
     Assertions.assertFalse(treeMix.isBalanced(treeNode));
   }
+
+
+  @Test
+  void testLongestPath()
+  {
+    TreeLongest treeLongest = new TreeLongest();
+    TreeNode node = new TreeNode(77);
+    node.setLeft(new TreeNode(88));
+    node.getLeft().setLeft(new TreeNode(99));
+    node.getLeft().getLeft().setRight(new TreeNode(100));
+    node.getLeft().getLeft().getRight().setRight(new TreeNode(101));
+    node.getLeft().getLeft().getRight().getRight().setLeft(new TreeNode(102));
+    node.getLeft().getLeft().getRight().getRight().getLeft().setLeft(new TreeNode(102));
+    Assertions.assertEquals(7, treeLongest.longest(node));
+  }
 }
