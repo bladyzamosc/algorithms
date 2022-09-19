@@ -58,4 +58,24 @@ public class TreeTest
     node.getLeft().getLeft().getRight().getRight().getLeft().setLeft(new TreeNode(102));
     Assertions.assertEquals(7, treeLongest.longest(node));
   }
+
+  @Test
+  public void inorderSuccessorTest() {
+
+    TreeNode node = new TreeNode(20);
+    node.setRight(new TreeNode(25));
+    node.setLeft(new TreeNode(9));
+    node.getLeft().setLeft(new TreeNode(5));
+    node.getLeft().setRight(new TreeNode(12));
+    node.getLeft().getRight().setLeft(new TreeNode(11));
+    node.getLeft().getRight().setRight(new TreeNode(14));
+
+    InorderSuccessor inorderSuccessor = new InorderSuccessor();
+    Assertions.assertEquals(inorderSuccessor.findInorderSuccessor(node, 14), 20);
+    Assertions.assertEquals(inorderSuccessor.findInorderSuccessor(node, 9), 11);
+    Assertions.assertEquals(inorderSuccessor.findInorderSuccessor(node, 11), 12);
+    Assertions.assertEquals(inorderSuccessor.findInorderSuccessor(node, 20), 25);
+    Assertions.assertEquals(inorderSuccessor.findInorderSuccessor(node, 12), 14);
+
+  }
 }

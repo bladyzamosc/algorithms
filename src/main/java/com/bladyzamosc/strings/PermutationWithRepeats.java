@@ -21,7 +21,7 @@ public class PermutationWithRepeats
       memo.put(prefix, prefix);
     } else {
       for (int i = 0; i < string.length(); i++) {
-        String second = string.substring(0,i) + string.substring(i+1, string.length());
+        String second = string.substring(0,i) + string.substring(i+1);
         permutationsWithMemo(second, prefix + string.charAt(i), memo);
       }
     }
